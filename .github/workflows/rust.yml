@@ -27,4 +27,4 @@ jobs:
     - name: Upload Build Artifact
       uses: actions/download-artifact@v4.1.8
       with:
-        path: ${{ matrix.os == 'windows-latest' && 'target/release/setup-mc.exe' || 'target/release/setup-mc' }}
+        path: ${{ matrix.os == 'windows-latest' && 'setup-mc/target/release/setup-mc.exe' || 'setup-mc/target/release/setup-mc' }}
