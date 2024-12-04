@@ -28,3 +28,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         path: ${{ matrix.os == 'windows-latest' && 'D:\a\setup-mc\setup-mc\target\release\setup-mc.exe' || '/home/runner/work/setup-mc/setup-mc/target/release/setup-mc' }}
+        name: ${{ matrix.os == 'windows-latest' && 'setup-mc-win.exe' || 'setup-mc-linux' }}
