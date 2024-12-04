@@ -1,6 +1,8 @@
 use figlet_rs::FIGfont;
 use serde_json::Value;
-use std::{io::Write, os::unix::fs::PermissionsExt};
+use std::io::Write;
+#[cfg(unix)]
+use std::os::unix::fs::PermissionsExt;
 use sysinfo::System;
 
 #[tokio::main]
@@ -420,6 +422,7 @@ async fn create_start_script() {
                 .as_bytes(),
             )
             .expect("Failed to write file");
+            #[cfg(unix)]
             std::fs::set_permissions(filename, std::fs::Permissions::from_mode(0o755))
                 .expect("Failed to set permissions");
             println!("Created start script with tmux.");
@@ -431,6 +434,7 @@ async fn create_start_script() {
             )
             .expect("Failed to write file");
         }
+        #[cfg(unix)]
         std::fs::set_permissions(filename, std::fs::Permissions::from_mode(0o755))
             .expect("Failed to set permissions");
     } else {
