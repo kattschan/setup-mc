@@ -25,4 +25,4 @@ jobs:
       run: cargo build --release
 
     - name: Get Directory Contents
-      run: ${{ matrix.os == 'windows-latest' && 'dir' || 'ls -la' }}
+      run: tree
