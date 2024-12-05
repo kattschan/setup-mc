@@ -19,3 +19,13 @@ The easiest way to run this app is to get a prebuilt version from the [releases]
    Open a command prompt or terminal in the folder you placed the code in, then run `cargo build --release` or `cargo run`.
 
 <sup><sub><sup>This is my first Rust app and I am told the code quality reflects that</sup></sub></sup>
+
+## Demoes
+
+
+https://github.com/user-attachments/assets/028157c7-4bbf-4371-971d-3624f86f640b
+
+
+
+https://github.com/user-attachments/assets/0f7b75b9-92f0-4b39-969c-e2ebfbd372b8
+
